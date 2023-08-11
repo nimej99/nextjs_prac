@@ -11,11 +11,12 @@ import { useRouter,useSearchParams, usePathname } from "next/navigation";
 //   }))
 // }
 
-export async function getStaticProps({ params : {params}} ) {
-  return {
-    props: { params },
-  };
-  }
+// export async function getStaticProps({ params : {params}} ) {
+//   return {
+//     props: { params },
+//   };
+//   }
+
 export async function getStaticPaths() {
   return {
     paths: [], // 동적 경로가 없으므로 빈 배열로 설정

@@ -4,8 +4,6 @@ const API_KEY = process.env.APi_KEY;
 
 const nextConfig = {
 
-  basePath: "/nextjs_prac",
-
   // async redirects(){
   //   return [
   //     {
