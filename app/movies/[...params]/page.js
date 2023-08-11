@@ -1,5 +1,5 @@
 'use client'
-import { useRouter,useSearchParams, usePathname } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
 // Generate segments for both [id] and [title]
 //   export async function generateStaticParams() {
@@ -11,11 +11,11 @@ import { useRouter,useSearchParams, usePathname } from "next/navigation";
 //   }))
 // }
 
-// export async function getStaticProps({ params : {params}} ) {
-//   return {
-//     props: { params },
-//   };
-//   }
+export async function getStaticProps({ params: { params } }) {
+  return {
+    props: { params },
+  };
+}
 
 export async function getStaticPaths() {
   return {
@@ -25,14 +25,14 @@ export async function getStaticPaths() {
 }
 
 export default function Page(
-  { params } = { params : { title: string, id: string } || 'Loading...'}
-  ){
-    console.log(params);
-  return(
+  { params } = { params: { title: string, id: string } || 'Loading...' }
+) {
+  console.log(params);
+  return (
     <>
-    <h2>detail</h2>
-    <p>id = {params.params[0] }</p>
-    <p>title = {params.params[1]}</p>
+      <h2>detail</h2>
+      <p>id = {params.title}</p>
+      <p>title = {params.id}</p>
     </>
   )
 }

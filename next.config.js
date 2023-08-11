@@ -4,6 +4,8 @@ const API_KEY = process.env.APi_KEY;
 
 const nextConfig = {
 
+  output: 'export',
+
   // async redirects(){
   //   return [
   //     {
